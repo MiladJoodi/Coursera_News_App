@@ -13,8 +13,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <Navbar />
-        {children}
+        <div className="container">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -10,7 +10,7 @@ const Navbar = () => {
 
     return (
         <nav className="">
-            <div className="relative grid grid-cols-5 lg:grid-cols-12 gap-4 mx-auto max-w-screen-xl px-2 py-4 sm:px-6 sm:py-6 lg:px-8">
+            <div className="relative grid grid-cols-5 lg:grid-cols-12 gap-4 container px-2 py-4 sm:px-6 sm:py-6 lg:px-8">
 
                 {/* Hamburger Icon */}
                 <div className="flex justify-center items-center sm:hidden cursor-pointer" onClick={() => setMobileMenu(!mobileMenu)}>
