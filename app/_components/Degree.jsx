@@ -1,29 +1,29 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/mGxWfFu83yf
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
+import GlobalApi from "@/lib/GlobalApi";
+import Image from "next/image"
 
-export default function Degree() {
+export default async function Degree() {
+
+  const uniList = await GlobalApi.getUnis();
+  console.log(uniList)
+
   return (
     <div className="bg-white p-8">
-      <h2 className="text-2xl font-bold mb-6">Earn Your Degree</h2>
+      <h2 className="text-2xl font-bold mb-4">Earn Your Degree</h2>
       <div className="grid grid-cols-4 gap-4">
         <Card className="w-full">
-          <img
+            <Image
+            src="/tor.jpg"
             alt="University of Michigan"
             className="rounded-t-lg"
             height="150"
-            src="/placeholder.svg"
-            style={{
-              aspectRatio: "250/150",
-              objectFit: "cover",
-            }}
             width="250"
-          />
+            style={{
+                aspectRatio: "250/150",
+              }}
+            />
           <CardContent>
             <div className="flex items-center space-x-2 mb-2">
               <Avatar>
@@ -46,7 +46,7 @@ export default function Degree() {
             alt="University of London"
             className="rounded-t-lg"
             height="150"
-            src="/placeholder.svg"
+            src="/london.jpg"
             style={{
               aspectRatio: "250/150",
               objectFit: "cover",
@@ -75,7 +75,7 @@ export default function Degree() {
             alt="University of London"
             className="rounded-t-lg"
             height="150"
-            src="/placeholder.svg"
+            src="/mishigan.webp"
             style={{
               aspectRatio: "250/150",
               objectFit: "cover",
@@ -104,7 +104,7 @@ export default function Degree() {
             alt="University of Michigan"
             className="rounded-t-lg"
             height="150"
-            src="/placeholder.svg"
+            src="/machn.webp"
             style={{
               aspectRatio: "250/150",
               objectFit: "cover",
