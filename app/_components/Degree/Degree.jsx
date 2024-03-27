@@ -15,10 +15,10 @@ export default async function Degree() {
     //   console.log(uniList[0].name)
 
     return (
-        <div className="px-8 min-w-[380px]">
-            <h2 className="text-2xl font-bold mb-4">Earn Your Degree</h2>
+        <div className="px-4 min-w-[380px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-            
+                <h2 className="text-2xl font-bold col-span-full">Earn a degree</h2>
+
                 {unis.map((uni, index) => index < 4 && (
                     <CardItem data={uni} key={index} />
                 ))}
