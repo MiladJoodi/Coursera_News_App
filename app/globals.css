@@ -10,7 +10,7 @@
     min-width: 400px;
 }
 
-.embla {
+.embla__viewport {
     overflow: hidden;
   }
   .embla__container {
