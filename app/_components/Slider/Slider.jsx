@@ -1,78 +1,36 @@
-"use client"
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-import React, { useCallback, useEffect, useState } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons
-} from './SliderArrowButtons'
-import { unis } from "@/lib/data";
-import Image from 'next/image';
-
-
-
-const Slider = (props) => {
-    console.log(props.slides)
-    const { slides, options } = props
-    const allSlides = props.slides
-
-    const [emblaRef, emblaApi] = useEmblaCarousel(options)
-    const [scrollProgress, setScrollProgress] = useState(0)
-  
-    const {
-      prevBtnDisabled,
-      nextBtnDisabled,
-      onPrevButtonClick,
-      onNextButtonClick
-    } = usePrevNextButtons(emblaApi)
-  
-    const onScroll = useCallback((emblaApi) => {
-      const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()))
-      setScrollProgress(progress * 100)
-    }, [])
-  
-    useEffect(() => {
-      if (!emblaApi) return
-  
-      onScroll(emblaApi)
-      emblaApi.on('reInit', onScroll)
-      emblaApi.on('scroll', onScroll)
-    }, [emblaApi, onScroll])
-
-    return (
-         <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {allSlides.map((slide, index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                {slide.images.map((item, index)=>{
-                    <h1>{item}</h1>
-                }
-                    
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+export default function SimpleSlider() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+  return (
+    <Slider {...settings}>
+      <div>
+        <h3>1</h3>
       </div>
-
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="embla__progress">
-          <div
-            className="embla__progress__bar"
-            style={{ transform: `translate3d(${scrollProgress}%,0px,0px)` }}
-          />
-        </div>
+      <div>
+        <h3>2</h3>
       </div>
-    </div>
-    );
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
+  );
 }
-
-export default Slider;
