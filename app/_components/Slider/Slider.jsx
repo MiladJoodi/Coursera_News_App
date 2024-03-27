@@ -3,11 +3,11 @@
 import React, { useCallback, useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import { unis } from '@/lib/data'
+import { SliderImages, unis } from '@/lib/data'
 import Image from 'next/image'
 
 export default function Slider() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false }, [Autoplay()])
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev()
@@ -18,27 +18,23 @@ export default function Slider() {
   }, [emblaApi])
 
   return (
-    <div className='embla rounded-xl'>
-      <div className="embla__viewpor h-56 max-w-full rounded-xl" ref={emblaRef}>
-        <div className="embla__container">
-          {unis.map((uni, index)=>{
-            {uni.images.map((item, i)=> {
-              return (
-                <div className="embla__slide">
-                {console.log(item)}
-                {/* <Image
-                        src="/logo.png"
-                        width={160}
-                        height={70}
-                        alt="logo"
-                        style={{
-                            aspectRatio: "150/55",
-                        }}
-                    /> */}
-              </div>
-              )
-            })}
-          })}
+    <div className='embla rounded-xl sm:hidden'>
+      <div className="embla__viewport max-w-lg mx-auto rounded-xl" ref={emblaRef}>
+        <div className="embla__container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-2">
+          {SliderImages.map((slide, index) => (
+            <div className="embla__slide h-72">
+              <Image
+                src={slide.url}
+                width={450}
+                height={450}
+                alt="logo"
+                style={{
+                  aspectRatio: "450/155",
+                }}
+                className='h-full rounded-xl border shadow-md'
+              />
+            </div>
+          ))}
           {/* <div className="embla__slide">Slide 1</div> */}
           {/* <div className="embla__slide">Slide 2</div> */}
           {/* <div className="embla__slide">Slide 3</div> */}
@@ -46,10 +42,10 @@ export default function Slider() {
       </div>
 
       {/* Buttons */}
-      <button className="embla__prev" onClick={scrollPrev}>
+      <button className="embla__prev hidden" onClick={scrollPrev}>
         Prev
       </button>
-      <button className="embla__next" onClick={scrollNext}>
+      <button className="embla__next hidden" onClick={scrollNext}>
         Next
       </button>
 
