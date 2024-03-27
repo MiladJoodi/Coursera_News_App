@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
 export default function Slider() {
-  const [emblaRef] = useEmblaCarousel()
+  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()])
 
   return (
     <div className="embla" ref={emblaRef}>
