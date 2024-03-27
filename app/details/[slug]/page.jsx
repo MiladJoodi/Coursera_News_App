@@ -19,7 +19,11 @@ const Details = ({ params }) => {
                 <Slider />
 
                 <div>
-                    ss
+                    <div>
+                        <span>name</span>
+                    </div>
+
+                    <div></div>
                 </div>
 
             </div>
