@@ -14,7 +14,7 @@ const Details = ({ params }) => {
         <div className="px-4">
             <h2 className="text-xl font-semibold col-span-full py-2">{singleUni.title}</h2>
 
-            <div className="flex flex-col md:flex-row text-l">
+            <div className="flex flex-col md:flex-row text-l md:gap-6">
                 {/* <h2 className="text-xl font-semibold col-span-full py-2">{params.slug}</h2> */}
                 <Slider />
 
