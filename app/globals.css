@@ -7,4 +7,5 @@
     max-width: 1280px !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    min-width: 400px;
 }

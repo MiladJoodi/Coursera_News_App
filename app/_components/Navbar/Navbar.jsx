@@ -29,12 +29,15 @@ const Navbar = () => {
                 </div>
 
                 {/* Logo */}
-                <div className="col-start-2 col-span-3 sm:col-span-1 sm:col-start-1  flex justify-center items-center">
+                <div className="col-start-2 col-span-3 sm:col-span-1 sm:col-start-1 flex justify-center items-center">
                     <Image
                         src="/logo.png"
-                        width={126}
-                        height={32}
+                        width={160}
+                        height={70}
                         alt="logo"
+                        style={{
+                            aspectRatio: "150/55",
+                        }}
                     />
                 </div>
 
@@ -59,7 +62,7 @@ const Navbar = () => {
                 {/* Search */}
                 <div className="hidden sm:flex col-start-2 sm:col-span-3 md:col-span-2 lg:col-start-3 lg:col-span-4 justify-center items-center ">
                     <div className="relative w-4/5 md:w-full ">
-                        <input className="p-3 w-full border border-1 border-slate-300 rounded-full" type="text" placeholder="Look something..." />
+                        <input className="p-3 w-full border border-1 outline-none border-slate-300 rounded-full tracking-wider" type="text" placeholder="Search something..." />
                         <div className="absolute right-3 top-1.5 border border-1 border-slate-300 p-1.5 rounded-full hover:bg-slate-200 transition-all duration-200 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
