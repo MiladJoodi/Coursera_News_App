@@ -1,25 +1,16 @@
 import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
-// import GlobalApi from "@/lib/GlobalApi";
 import Image from "next/image";
-import { unis } from "@/lib/data";
 
-export default async function Degree() {
 
-    //   const uniList = await GlobalApi.getUnis();
-    //   console.log(uniList[0].name)
-
+const CardItem = ({data}) => {
     return (
-        <div className="px-8 min-w-[380px]">
-            <h2 className="text-2xl font-bold mb-4">Earn Your Degree</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-                {unis.map((uni, index) => index < 4 && (
-                    <Card className="w-full flex flex-col gap-3" key={uni.id}>
+        <Card className="w-full flex flex-col gap-3">
                         <Image
-                            src={uni.image}
+                            src={data.image || "/profile.png"}
                             alt="University of Michigan"
-                            className="rounded-t-lg w-full object-cover"
+                            className="rounded-t-lg w-full object-cover "
                             height="150"
                             width="450"
                             style={{
@@ -34,8 +25,8 @@ export default async function Degree() {
                                         <AvatarFallback>U</AvatarFallback>
                                     </Avatar>
                                     <div className="flex flex-col gap-2">
-                                        <div className="font-semibold nowrap overflow-hidden text-ellipsis max-w-[250px] truncate">{uni.title}</div>
-                                        <div className="text-sm text-gray-500 line-clamp-3 text-justify">{uni.desc}</div>
+                                        <div className="font-semibold nowrap overflow-hidden text-ellipsis max-w-[250px] truncate">{data.title}</div>
+                                        <div className="text-sm text-gray-500 line-clamp-3 text-justify">{data.desc}</div>
                                     </div>
                                 </div>
 
@@ -64,18 +55,12 @@ export default async function Degree() {
                                     </svg>
                                 </div>
                                 <div className="line-clamp-1">
-                                    {uni.address}
+                                    {data.address}
                                 </div>
                             </div>
                         </CardContent>
                     </Card>
-                ))}
-
-            </div>
-            <Button className="mt-4" variant="outline">
-                Show 8 more
-            </Button>
-        </div>
-    )
+    );
 }
 
+export default CardItem;
