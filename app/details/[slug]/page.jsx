@@ -18,13 +18,16 @@ const Details = ({ params }) => {
                 {/* <h2 className="text-xl font-semibold col-span-full py-2">{params.slug}</h2> */}
                 <Slider />
 
-                <div>
-                    <div>
-                        <span>name</span>
-                    </div>
 
-                    <div></div>
+                <div className="flex text-xl items-center gap-2 p-2 flex-auto">
+                    <p className="bg-[#F9F2F4] rounded-lg py-1 px-4">Name</p>
+                    <p className="bg-[#F9F2F4] rounded-lg py-1 px-4 font-semibold">Harvard University</p>
                 </div>
+
+                <div>
+                    Location
+                </div>
+
 
             </div>
         </div>
