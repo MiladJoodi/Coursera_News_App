@@ -18,10 +18,27 @@ export default function Slider() {
   }, [emblaApi])
 
   return (
-    <div className='embla rounded-xl sm:hidden'>
-      <div className="embla__viewport max-w-lg mx-auto rounded-xl" ref={emblaRef}>
-        <div className="embla__container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-2">
-          {SliderImages.map((slide, index) => (
+    <div className='embla rounded-xl '>
+      <div className="embla__viewport max-w-lg mx-auto md:mx-0 rounded-xl" ref={emblaRef}>
+        <div className="embla__container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
+
+          {unis.map((item, index)=>(
+            <div className="embla__slide h-72 cursor-pointer">
+            <Image
+            src={item.images[index]}
+            width={450}
+            height={450}
+            alt="logo"
+            style={{
+              aspectRatio: "450/155",
+            }}
+            className='h-full rounded-xl border'
+        />
+        </div>
+            // <span>{item.images[0]}</span>
+          ))}
+
+          {/* {SliderImages.map((slide, index) => (
             <div className="embla__slide h-72">
               <Image
                 src={slide.url}
@@ -34,7 +51,7 @@ export default function Slider() {
                 className='h-full rounded-xl border shadow-md'
               />
             </div>
-          ))}
+          ))} */}
           {/* <div className="embla__slide">Slide 1</div> */}
           {/* <div className="embla__slide">Slide 2</div> */}
           {/* <div className="embla__slide">Slide 3</div> */}

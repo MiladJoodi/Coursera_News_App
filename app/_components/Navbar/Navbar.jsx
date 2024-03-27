@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Logo */}
-                <div className="col-start-2 col-span-3 sm:col-span-1 sm:col-start-1 flex justify-center items-center">
+                <Link href="/" className="cursor-pointer col-start-2 col-span-3 sm:col-span-1 sm:col-start-1 flex justify-center items-center">
                     <Image
                         src="/logo.png"
                         width={160}
@@ -39,7 +39,7 @@ const Navbar = () => {
                             aspectRatio: "150/55",
                         }}
                     />
-                </div>
+                </Link>
 
 
                 {/* Search Icon */}
