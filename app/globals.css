@@ -4,19 +4,32 @@
 
 
 .container {
-    max-width: 1280px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    min-width: 400px;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  min-width: 400px;
 }
 
 .embla__viewport {
-    overflow: hidden;
-  }
-  .embla__container {
-    display: flex;
-  }
-  .embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-  }
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+/* Map */
+.mapboxgl-ctrl-bottom-right {
+  display: none;
+}
+
+.mapboxgl-canvas {
+  border-radius: 0.5rem;
+}
+
+/* Map */

@@ -18,7 +18,7 @@ export default function Slider() {
   }, [emblaApi])
 
   return (
-    <div className='embla rounded-xl '>
+    <div className='embla rounded-xl md:flex-1 flex-1'>
       <div className="embla__viewport max-w-lg mx-auto md:mx-0 rounded-xl" ref={emblaRef}>
         <div className="embla__container grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2">
 
