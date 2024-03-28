@@ -12,25 +12,28 @@ const AddUni = () => {
     const [rank, setRank] = useState(0);
     const [address, setAddress] = useState("");
     const [image, setImage] = useState("");
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = async (e) => {
+        setLoading(true)
         e.preventDefault();
         console.log("first")
-        if(!title || !desc || !slug || !rank || !address || !image){
+        if (!title || !desc || !slug || !rank || !address || !image) {
             alert("All field in requied")
         }
-        
+
         try {
-            const res = await fetch("http://localhost:3000/api/unis",{
+            const res = await fetch("http://localhost:3000/api/unis", {
                 method: 'POST',
                 header: {
-                    "Content-Type" : "application/json",
+                    "Content-Type": "application/json",
                 },
-                body: JSON.stringify({title, slug, rank, image, address, desc})
+                body: JSON.stringify({ title, slug, rank, image, address, desc })
             })
-            if(res.ok){
+            if (res.ok) {
+                setLoading(false)
                 router.push("/")
-            }else{
+            } else {
                 throw new Error("Failed to create a post.")
             }
         } catch (error) {
@@ -59,7 +62,7 @@ const AddUni = () => {
                                     id="title"
                                     name="title"
                                     value={title}
-                                    onChange={(e)=>setTitle(e.target.value)}
+                                    onChange={(e) => setTitle(e.target.value)}
                                 />
                             </div>
 
@@ -72,7 +75,7 @@ const AddUni = () => {
                                     id="address"
                                     name="address"
                                     value={address}
-                                    onChange={(e)=>setAddress(e.target.value)}
+                                    onChange={(e) => setAddress(e.target.value)}
                                 />
                             </div>
 
@@ -86,7 +89,7 @@ const AddUni = () => {
                                         id="slug"
                                         name="slug"
                                         value={slug}
-                                        onChange={(e)=>setSlug(e.target.value)}
+                                        onChange={(e) => setSlug(e.target.value)}
                                     />
                                 </div>
 
@@ -99,7 +102,7 @@ const AddUni = () => {
                                         id="image"
                                         name="image"
                                         value={image}
-                                        onChange={(e)=>setImage(e.target.value)}
+                                        onChange={(e) => setImage(e.target.value)}
                                     />
                                 </div>
 
@@ -112,7 +115,7 @@ const AddUni = () => {
                                         id="rank"
                                         name="rank"
                                         value={rank}
-                                        onChange={(e)=>setRank(e.target.value)}
+                                        onChange={(e) => setRank(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -128,7 +131,7 @@ const AddUni = () => {
                                     id="message"
                                     name="desc"
                                     value={desc}
-                                    onChange={(e)=>setDesc(e.target.value)}
+                                    onChange={(e) => setDesc(e.target.value)}
                                 ></textarea>
                             </div>
 
@@ -137,7 +140,7 @@ const AddUni = () => {
                                     type="submit"
                                     className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
                                 >
-                                    Send Enquiry
+                                    {loading ? "Loading..." : "Send Enquiry"}
                                 </button>
                             </div>
                         </form>
