@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
 import Image from "next/image";
 import Link from "next/link";
+import UnisLoading from "../Skeletons/UnisLoading";
 
 
 const CardItem = ({ data }) => {
