@@ -10,7 +10,11 @@ export async function POST(request){
     return NextResponse.json({message : "Uni Created"})
 }
 
-
+export async function GET(){
+    await connectToDb();
+    const posts = await Uni.find();
+    return NextResponse.json({posts})
+}
 
 
 
