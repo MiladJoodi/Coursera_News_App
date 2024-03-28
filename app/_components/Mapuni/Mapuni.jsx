@@ -4,7 +4,7 @@ import Map from 'react-map-gl';
 
 const Mapuni = () => {
   return (
-    <div className='flex justify-center px-1 w-full rounded-lg'>
+    <div className='flex justify-center w-full rounded-lg'>
       <Map
       mapboxAccessToken="pk.eyJ1IjoicGF0dWdoIiwiYSI6ImNsdWJhcnZidzA0Y2oybXBrNmg5bWhobTgifQ.t9UnsZPddFQZUyFztC43wg"
       initialViewState={{
