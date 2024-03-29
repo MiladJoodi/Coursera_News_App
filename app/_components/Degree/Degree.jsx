@@ -24,7 +24,7 @@ export default async function Degree() {
     //   console.log(uniList[0].name)
 
     const {posts} = await getPosts();
-    console.log(posts)
+    // console.log(posts)
 
     return (
         <div className="px-4 min-w-[380px]">
