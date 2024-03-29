@@ -14,7 +14,7 @@ const NavbarProfile = () => {
                         <>
                         <UserButton />
                         <Link href={"/add"}>
-                            Add
+                            Add Post
                         </Link>
                         </>
                     ):(
