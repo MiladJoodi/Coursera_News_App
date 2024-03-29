@@ -1,14 +1,6 @@
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { CardContent, Card } from "@/components/ui/card"
+// import { Button } from "@/components/ui/button"
 // import GlobalApi from "@/lib/GlobalApi";
-import Image from "next/image";
-import { unis } from "@/lib/data";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 import CardItem from "../Card/CardItem";
-import { Suspense } from "react";
-import UnisLoading from "../Skeletons/UnisLoading";
 
 
 const getPosts = async ()=>{
@@ -43,9 +35,9 @@ export default async function Degree() {
                 ))}
 
             </div>
-            <Button className="mt-4" variant="outline">
+            <div className="mt-4" variant="outline">
                 Show 8 more
-            </Button>
+            </div>
         </div>
     )
 }

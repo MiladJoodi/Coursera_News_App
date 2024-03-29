@@ -1,15 +1,11 @@
-import { AvatarImage, AvatarFallback, Avatar } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { CardContent, Card } from "@/components/ui/card"
 import Image from "next/image";
 import Link from "next/link";
-import UnisLoading from "../Skeletons/UnisLoading";
 
 
 const CardItem = ({ data }) => {
     return (
         <>
-            <div className="grid grid-cols-4 border border-gray-200 rounded-lg text-sm">
+            <div className="grid grid-cols-4 border border-gray-200 rounded-lg text-sm bg-white shadow-lg">
 
                 <Image
                     src={data.image}

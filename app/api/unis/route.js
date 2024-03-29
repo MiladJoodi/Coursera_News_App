@@ -1,7 +1,8 @@
-// import UniModel from "@/lib/Models";
-import { Uni } from "@/lib/Models";
-import { connectToDb } from "@/lib/utils";
+// import { Uni } from "@/lib/Models";
+// import { connectToDb } from "@/lib/utils";
 import { NextResponse } from "next/server";
+import { Uni } from "../../../lib/Models";
+import { connectToDb } from "../../../lib/utils";
 
 export async function POST(request){
     const {title, desc, image, address, slug, rank} = await request.json();
