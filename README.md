@@ -1,4 +1,4 @@
-# A Mini University details app
+# Mini University details app
 
 <h4>I used Next.js , Tailwind.css and Clerk in this project. 👌</h4>  
 
