@@ -1,6 +1,6 @@
 # Mini University details app
 
-<h4>I am excited to share you to my new project Next.js, Tailwind css , MongoDB & Mongoose and Clerk for authentication. 👌</h4>  
+<h4>In this project I used Next.js, Tailwind css, MongoDB & Mongoose and Clerk for authentication. You can see full demo and detail in description. 👌</h4>  
 
 
 <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
