@@ -1,6 +1,6 @@
 # Mini University details app
 
-<h4>In this project I used Next.js, Tailwind css, MongoDB & Mongoose and Clerk for authentication. You can see full demo and detail in description. 👌</h4>  
+<h4>In this project, I utilized Next.js, Tailwind CSS, MongoDB & Mongoose, and Clerk for authentication. For a comprehensive demonstration and further information, please refer to the description. 👌</h4>  
 
 
 <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
@@ -43,12 +43,15 @@
 
   \
   <br />
-This project contains a fully responsive navbar and a inspiring mobile menu.
-I used soothing colors. For authentication I used Clerk, it help me to implement the user login feature in a very professional way.
-It was fantastic. 👏
- I used 'Api Routes' in this project. The main page posts are loaded from a MongoDB database and I connected to it using Mongoose. After login with Email and verify code or google account and github you can create a new post in home page. 💪
-Please read the source. The demo version is not yet complete.
-Thank you very much. 🙏
+This project features a fully responsive navigation bar and an innovative mobile menu.
+
+The color scheme chosen is calming. For user authentication, Clerk was utilized, enabling the implementation of the user login functionality in a highly professional manner, which proved to be excellent. 👏
+
+ 'Api Routes' were incorporated into this project. The primary page's posts are retrieved from a MongoDB database accessed through Mongoose. 
+
+Following authentication via email and verification code, or Google and GitHub accounts, users can create new posts on the homepage.💪
+
+Kindly refer to the source for further information. Please note that the demo version is not yet fully developed. Your attention to this matter is greatly appreciated. 🙏
 
 ![](https://s31.picofile.com/file/8473935434/screencapture_localhost_3000_2024_03_30_13_41_35.png)
 
