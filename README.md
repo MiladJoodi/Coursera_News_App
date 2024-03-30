@@ -1,6 +1,6 @@
 # Mini University details app
 
-<h4>I used Next.js , Tailwind.css and Clerk in this project. 👌</h4>  
+<h4>I am excited to share you to my new project Next.js, Tailwind css , MongoDB & Mongoose and Clerk for authentication. 👌</h4>  
 
 
 <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
@@ -18,23 +18,37 @@
       height="40"
     />
   </a>
-  <a href="https://strapi.io/">
+  <a href="https://clerk.com/">
     <img
       src="https://pipedream.com/s.v0/app_dBhw8k/logo/orig"
       width="38"
       height="38"
     />
   </a>
+  <a href="https://www.mongodb.com/">
+    <img
+      src="https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_logo_icon_146424.png"
+      width="45"
+      height="45"
+    />
+    </a>
+  <a href="https://mongoosejs.com/docs/">
+    <img
+      src="https://s30.picofile.com/file/8472106468/mongoose.jpg"
+      width="120"
+      height=30"
+    />
+    </a>
+  
 
   \
   <br />
-  This project contains a small list that includes a fully responsive navbar and a inspiring mobile menu.
-I used soothing colors.
-By using Clerk, I was able to implement the user login feature in a very professional way. It was fantastic.
-I used 'Api Routes' in this project. 
-The main page posts are loaded from a MongoDB database and I connected to it using Mongoose.
-Also You can post a new artile in home page after login.. This is a close to full stack.
+This project contains a fully responsive navbar and a inspiring mobile menu.
+I used soothing colors. For authentication I used Clerk, it help me to implement the user login feature in a very professional way.
+It was fantastic. 👏
+ I used 'Api Routes' in this project. The main page posts are loaded from a MongoDB database and I connected to it using Mongoose. After login with Email and verify code or google account and github you can create a new post in home page. 💪
 Please read the source. The demo version is not yet complete.
+Thank you very much. 🙏
 
 ![](https://s31.picofile.com/file/8473935434/screencapture_localhost_3000_2024_03_30_13_41_35.png)
 
