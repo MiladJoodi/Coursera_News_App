@@ -1,4 +1,4 @@
-# Mini University details app
+# Mini University details app!
 
 <h4>In this project, I utilized Next.js, Tailwind CSS, MongoDB & Mongoose, and Clerk for authentication. For a comprehensive demonstration and further information, please refer to the description. 👌</h4>  
 
